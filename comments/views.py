@@ -9,7 +9,7 @@ class CommentList(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Comment.objects.all()
-    filter_backends [
+    filter_backends = [
         DjangoFilterBackend,
     ]
     filterset_fields = [
