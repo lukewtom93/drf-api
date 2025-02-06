@@ -109,7 +109,7 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = {os.environ.get('CLIENT_ORIGIN')}
+ALLOWED_ORIGINS = {os.environ.get('CLIENT_ORIGIN')}
 
 CORS_ALLOW_CREDENTIALS = True
 
