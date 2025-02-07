@@ -60,7 +60,7 @@ SITE_ID = 1
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'https://drf-api-123-44d3c801caea.herokuapp.com/']
 
