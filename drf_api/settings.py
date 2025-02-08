@@ -116,7 +116,7 @@ MIDDLEWARE = [
 #     ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://moments-l-0479df3b77ea.herokuapp.com/',
+    'https://moments-l-0479df3b77ea.herokuapp.com',
     'http://192.168.1.210:3000',
     ]
 
