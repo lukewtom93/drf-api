@@ -9,11 +9,11 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import re
 from pathlib import Path
 import os
 import dj_database_url
-import re
+
 
 if os.path.exists('env.py'):
     import env
@@ -65,7 +65,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['127.0.0.1', os.environ.get('ALLOWED_HOST'),]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-lukewtom93-drfapi-3iw9msupwu2.ws.codeinstitute-ide.net', ]
+CSRF_TRUSTED_ORIGINS = ['127.0.0.1', ]
 
 
 # Application definition
