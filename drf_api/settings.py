@@ -65,7 +65,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['127.0.0.1', os.environ.get('ALLOWED_HOST'),]
 
-CSRF_TRUSTED_ORIGINS = ['127.0.0.1', ]
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/', ]
 
 
 # Application definition
