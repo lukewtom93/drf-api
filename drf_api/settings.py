@@ -60,7 +60,7 @@ SITE_ID = 1
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'drf-api-123-44d3c801caea.herokuapp.com']
 
@@ -110,6 +110,12 @@ MIDDLEWARE = [
 ]
 
 ALLOWED_ORIGINS = {os.environ.get('CLIENT_ORIGIN')}
+
+CORS_ALLOWED_ORIGINS = [
+    "http://192.168.1.210:3000",
+    "https://moments-l-0479df3b77ea.herokuapp.com/",
+]
+
 
 CORS_ALLOW_CREDENTIALS = True
 
