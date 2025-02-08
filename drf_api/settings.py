@@ -116,8 +116,8 @@ MIDDLEWARE = [
 #     ]
 
 CORS_ALLOWED_ORIGINS = [
-    os.environ.get("CLIENT_ORIGIN"),
-    os.environ.get("CLIENT_ORIGIN_DEV"),
+    'https://moments-l-0479df3b77ea.herokuapp.com/',
+    'http://192.168.1.210:3000',
     ]
 
 
