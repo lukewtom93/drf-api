@@ -115,11 +115,11 @@ MIDDLEWARE = [
 #          r"^https:\/\/.*\.codeinstitute-ide\.net$",
 #     ]
 
-# CORS_ALLOWED_ORIGINS = [
-#     'http://localhost:3000',
-#     'https://moments-l-0479df3b77ea.herokuapp.com',
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+    'https://moments-l-0479df3b77ea.herokuapp.com',
 
-#     ]
+    ]
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
