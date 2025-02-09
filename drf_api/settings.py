@@ -65,7 +65,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['127.0.0.1', 'drf-api-123-44d3c801caea.herokuapp.com',]
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000/', ]
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', ]
 
 
 # Application definition
@@ -116,8 +116,9 @@ MIDDLEWARE = [
 #     ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://moments-l-0479df3b77ea.herokuapp.com',
-    'http://192.168.1.210:3000',
+    os.environ.get('CLIENT_ORIGIN'),
+    os.environ.get('CLIENT_ORIGIN_DEV'),
+
     ]
 
 
