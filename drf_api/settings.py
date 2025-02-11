@@ -63,9 +63,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['127.0.0.1', os.environ.get('ALLOWED_HOST'),]
+ALLOWED_HOSTS = ['192.168.1.210', '127.0.0.1', os.environ.get('ALLOWED_HOST'),]
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', ]
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8000', 'http://192.168.1.210:3000',]
 
 
 # Application definition
@@ -118,20 +118,22 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'https://moments-l-0479df3b77ea.herokuapp.com',
+    'http://192.168.1.210:3000'
 
     ]
 
-# if 'CLIENT_ORIGIN' in os.environ:
-#     CORS_ALLOWED_ORIGINS = [
-#          os.environ.get('CLIENT_ORIGIN')
-#     ]
+if 'CLIENT_ORIGIN' in os.environ:
+    CORS_ALLOWED_ORIGINS = [
+         os.environ.get('CLIENT_ORIGIN')
+    ]
 
 
-# if 'CLIENT_ORIGIN_DEV' in os.environ:
-#     CORS_ALLOWED_ORIGIN_REGEXES = [
-#          r"^https:\/\/.*\.codeinstitute-ide\.net$",
-#     ]
+if 'CLIENT_ORIGIN_DEV' in os.environ:
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+         r"^https:\/\/.*\.codeinstitute-ide\.net$",
+    ]
 
+CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOW_CREDENTIALS = True
 
